@@ -2,6 +2,7 @@ package assignment;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
 //new comment added
 // WeatherAnalysis
 public class assignmentThree {
@@ -52,14 +53,30 @@ public class assignmentThree {
             }
             if (report.getDaytimeDuration() > longestDaytimeDay.getDaytimeDuration()) {
                 longestDaytimeDay = report;
+            }if (report.sunriseTime.compareTo(earliestSunriseDay.sunriseTime) < 0) {
+                earliestSunriseDay = report;
             }
+            if (report.sunriseTime.compareTo(lateSunriseDay.sunriseTime) > 0) {
+                lateSunriseDay = report;
+            }
+            if (report.sunsetTime.compareTo(earliestSunsetDay.sunsetTime) < 0) {
+                earliestSunsetDay = report;
+            }
+            if (report.sunsetTime.compareTo(lateSunsetDay.sunsetTime) > 0) {
+                lateSunsetDay = report;
+            }
+
 
         }
 
-        System.out.println("Hottest day: " + hottestDay.dayName );
-        System.out.println("Coldest day: " + coldestDay.dayName);
-        System.out.println("Highest rainfall day: " + highestRainfallDay.dayName);
-        System.out.println("Longest daytime day: " + longestDaytimeDay.dayName);
+        System.out.println("Hottest day: " + hottestDay.dayName + "Temperature: "+ hottestDay.highestTemp);
+        System.out.println("Coldest day: " + coldestDay.dayName + "Tempeature: "+coldestDay.leastTemp);
+        System.out.println("Highest rainfall day: " + highestRainfallDay.dayName + "Rainfall: "+highestRainfallDay.rainfall);
+        System.out.println("Longest daytime day: " + longestDaytimeDay.dayName + "duration" + longestDaytimeDay.getDaytimeDuration());
+        System.out.println("Earliest Sunrise Day: "+ earliestSunriseDay.dayName + " "+ earliestSunriseDay.sunriseTime);
+        System.out.println("Late Sunrise Day: "+lateSunriseDay.dayName+" "+lateSunriseDay.sunriseTime);
+        System.out.println("Earliest Sunset Day: "+earliestSunsetDay.dayName+" "+earliestSunsetDay.sunriseTime);
+        System.out.println("Late Sunset Day: "+lateSunsetDay.dayName+" "+lateSunsetDay.sunsetTime);
 
         scanner.close();
     }
