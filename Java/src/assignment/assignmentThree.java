@@ -2,7 +2,7 @@ package assignment;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//new comment added
 // WeatherAnalysis
 public class assignmentThree {
     public static void main(String[] args) {
