@@ -53,6 +53,7 @@ public class assignmentThree {
             if (report.getDaytimeDuration() > longestDaytimeDay.getDaytimeDuration()) {
                 longestDaytimeDay = report;
             }
+
         }
 
         System.out.println("Hottest day: " + hottestDay.dayName );
