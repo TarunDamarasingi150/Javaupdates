@@ -12,7 +12,7 @@ class Main {
         dataArray.add(new Data(3, "Mounika3", "hyderabad3", "3lpa"));
         dataArray.add(new Data(4, "Mounika3", "hyderabad4", "3lpa"));
         dataArray.add(new Data(1, "Mounika2", "hyderabad4", "3lpa"));
-
+        dataArray.add(new Data(2, "Mounika2", "hyderabad4", "3lpa"));
         ArrayList<Data> newArray = new ArrayList<>();
         ArrayList<Data> uniqueArray = new ArrayList<>();
 
